@@ -1,0 +1,31 @@
+{
+  "name": "@m1yh3m/service.uniqueid",
+  "version": "1.0.0",
+  "description": "Serves unique ids",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Running tests... ' && jasmine",
+    "watch-test": "watch 'npm run test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m1yh3m/service.uniqueid.git"
+  },
+  "keywords": [
+    "unique-id",
+    "service"
+  ],
+  "author": "m1yh3m",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m1yh3m/service.uniqueid/issues"
+  },
+  "homepage": "https://github.com/m1yh3m/service.uniqueid#readme",
+  "dependencies": {
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "jasmine": "^3.5.0",
+    "watch": "^1.0.2"
+  }
+}
