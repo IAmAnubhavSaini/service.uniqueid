@@ -35,4 +35,22 @@ describe('uniqueid.module.js', () => {
         const actual = lib().generate().result.split('-').length
         expect(actual).toEqual(expected)
     })
+    describe('lib(custom rules)', () => {
+        const rules = {
+            joinOn: '|',
+            times: 2,
+            randomUniqueIdGenerator: require('uuid/v4'),
+            __version: 'blah'
+        }
+        it('lib(rules) returns provied versino', () => {
+            const actual = lib(rules).__version
+            const expected = 'blah'
+            expect(actual).toEqual(expected)
+        })
+        it('lib(rules).generate() returns result with one `|` and 8 `-`', () => {
+            const actual = lib(rules).generate().result
+            expect(actual.split('|').length).toEqual(2) // xyz|abc
+            expect(actual.split('-').length).toEqual(9) // a-b-c-d-e|f-g-h-i-j
+        })
+    })
 })
