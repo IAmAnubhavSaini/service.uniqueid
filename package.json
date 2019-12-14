@@ -4,7 +4,7 @@
   "description": "Serves unique ids",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'Running tests... ' && jasmine",
+    "test": "standard && echo 'Running tests... ' && jasmine",
     "watch-test": "watch 'npm run test'",
     "test-cover": "istanbul cover --include-all-sources spec/config.js && istanbul check-coverage"
   },
@@ -29,6 +29,12 @@
     "istanbul": "^0.4.5",
     "jasmine": "^3.5.0",
     "jasmine-console-reporter": "^3.1.0",
+    "standard": "^14.3.1",
     "watch": "^1.0.2"
+  },
+  "standard": {
+    "env": [
+      "jasmine"
+    ]
   }
 }
