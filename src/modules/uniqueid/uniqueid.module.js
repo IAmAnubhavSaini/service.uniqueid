@@ -12,11 +12,7 @@ function boot (lib) {
    * @param {String} joinOn What symbol to use to stitch together the multiple unique ids to generate one big unique id. '-' by default.
    */
   const generate = () => {
-    let result = []
-    for (let i = 0; i < times; i++) {
-      result.push(gen())
-    }
-    result = result.join(joinOn)
+    const result = new Array(times).fill(0).map(i => gen()).join(joinOn)
     return { result, __version }
   }
 
