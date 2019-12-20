@@ -4,9 +4,10 @@
   "description": "Serves unique ids",
   "main": "index.js",
   "scripts": {
+    "cleanup": "rm -rf ./log",
     "test": "standard && echo 'Running tests... ' && jasmine",
     "watch-test": "watch 'npm run test'",
-    "test-cover": "istanbul cover --include-all-sources spec/config.js && istanbul check-coverage"
+    "test-cover": "npm run cleanup && istanbul cover --include-all-sources spec/config.js && istanbul check-coverage"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,12 @@
   },
   "homepage": "https://github.com/m1yh3m/service.uniqueid#readme",
   "dependencies": {
+    "@m1yh3m/random.bytes": "^1.0.0",
+    "@m1yh3m/requestid.middleware": "^1.0.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "rotating-file-stream": "^2.0.0",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
