@@ -1,7 +1,6 @@
 # service.uniqueid
 
-Generates unique ids
+This project achieves two goals:
 
-## EXTENSIONS used
-
-- standardjs : yup, no semi-colons.
+1. Generates unique ids
+2. Makes you wonder why and how to use it?

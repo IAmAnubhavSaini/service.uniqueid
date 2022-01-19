@@ -6,24 +6,24 @@
 /**
  * times: number of unique ids stictched together
  */
-const times = 3
+const times = 3;
 
 /**
  * joinOn: character or string that is used to stitch the unique ids together
  */
-const joinOn = '-'
+const joinOn = '-';
 
 /**
  * which generator to use to generate random unique ids.
  * INTERFACE
  * randomUniqueIdGenerator should be a function
  */
-const randomUniqueIdGenerator = require('uuid/v4')
+const {v4: randomUniqueIdGenerator} = require('uuid');
 
 /**
  * internal and external version of API; just of bookkeeping.
  * This is sure to change if anything changes here.
  */
-const __version = { internal: 1, external: 'uuid/v4' }
+const __version = {internal: 2, external: 'uuid/v4'};
 
-module.exports = { joinOn, times, randomUniqueIdGenerator, __version }
+module.exports = {joinOn, times, randomUniqueIdGenerator, __version};
